@@ -17,7 +17,7 @@ def mostrar_y_elegir_opciones(opciones, caracteristica):
 
 def mostrar_y_elegir_multiples_opciones(opciones, caracteristica):
     while True:
-        print(f"Elige tus {caracteristica} (separa los números con comas):")
+        print(f"Elige tus {caracteristica} (separa los números con comas y sin espacios):")
         for idx, opcion in enumerate(opciones, start=1):
             print(f"{idx}. {opcion}")
         entrada = input("Selecciona las opciones: ")
@@ -36,15 +36,15 @@ def elegir_menu():
 
 
 def elegir_bebida():
-    bebidas = ["Agua", "Refresco", "Cerveza", "Vino"]
+    bebidas = ["Agua", "Refresco", "Cerveza", "Vino", "Nada"]
     return mostrar_y_elegir_opciones(bebidas, "bebida")
 
 def elegir_postre():
-    postres = ["Banana Split", "Weed Brownie", "Fruta"]
+    postres = ["Banana Split", "Weed Brownie", "Fruta", "Nada"]
     return mostrar_y_elegir_opciones(postres, "postre")
 
 def elegir_entrante():
-    entrantes = ["Nachos", "Quesadilla", "Croquetas"]
+    entrantes = ["Nachos Guerrero", "Croquetitas", "Croquetas de cocidito madrileño", "Nada"]
     return mostrar_y_elegir_opciones(entrantes, "entrante")
 
 def guardar_pedido(menu, tamaño, masa, ingredientes, salsa, tecnica_coccion, presentacion, bebida, postre, entrante):
@@ -58,10 +58,10 @@ def guardar_pedido(menu, tamaño, masa, ingredientes, salsa, tecnica_coccion, pr
 
 def crear_pizza():
     menus = ["Si", "No"]
-    tamaños = ["Pequeña", "Mediana", "Grande"]
-    masas = ["Delgada", "Gruesa", "Artesanal"]
-    ingredientes = ["Pepperoni", "Champiñones", "Jalapeños", "Extra queso"]
-    salsas = ["Tomate", "Albahaca", "Barbacoa"]
+    tamaños = ["Pequeña", "Mediana", "Familiar"]
+    masas = ["Fina", "Clasica", "Rellena"]
+    ingredientes = ["Tomate", "Queso", "Jamon", "Piña", "Carne picada", "Aceitunas  ", "Pepperoni", "Champiñones", "Jalapeños", "Extra queso"]
+    salsas = ["Picante", "Carbonara", "Barbacoa"]
     tecnicas_coccion = ["Horno de leña", "Horno convencional"]
     presentaciones = ["Normal", "Sin borde", "Borde de queso"]
 
