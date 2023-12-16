@@ -55,3 +55,5 @@ def calculin():
     
     if m == True and b == False and p == False and e == False:
         print("La cuenta es de 10€")
+
+calculin()
