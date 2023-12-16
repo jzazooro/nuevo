@@ -56,7 +56,7 @@ def guardar_pedido(menu, tamaño, masa, ingredientes, salsa, tecnica_coccion, pr
         writer.writerow([menu, tamaño, masa, ', '.join(ingredientes), salsa, tecnica_coccion, presentacion, bebida, postre, entrante])
     print("Pedido guardado exitosamente.")
 
-def crear_pizza():
+def crear_pedido():
     menus = ["Si", "No"]
     tamaños = ["Pequeña", "Mediana", "Familiar"]
     masas = ["Fina", "Clasica", "Rellena"]
@@ -87,26 +87,34 @@ def menu_ordenar_pizza():
     while True:
         print("\nBienvenido a la Pizzería - Menú de Personalización de Pizza")
         print("1. Crear Pizza Personalizada")
-        print("2. Ver productos y precios")
+        print("2. Ver la carta")
         print("3. Volver al Menú Principal")
         opcion = input("Seleccione una opción: ")
 
         if opcion == '1':
-            crear_pizza()
+            crear_pedido()
         elif opcion == '2':
-            print("Menu (Entrante, Pizza, Postre, Bebida): 25€ \n")
-            print("Menu (Entrante, Pizza, Postre): 20€ \n")
-            print("Menu (Entrante, Pizza, Bebida): 20€ \n")
-            print("Menu (Pizza, Postre, Bebida): 20€ \n")
-            print("Menu (Entrante, Pizza): 15€ \n")
-            print("Menu (Pizza, Bebida): 15€ \n")
-            print("Menu (Pizza, Postre): 15€ \n")
-            print("Menu (Pizza): 10€ \n")
+            print("1. Carta de menus")
+            print("2. Carta individual")
             print("NOTA \n")
             print("El vino Domaine de la Romanée-Conti implica un suplemento de 1000€ \n")
-
             print("Seleccion de nuestros editores. Le recomendamos el Château Lafite Rothschild y las croquetas de cocidito madrileño \n")
-            print(" \n")
+            seleccion = input("Seleccione una opción: \n")
+            if seleccion == '1':
+                print("Menu (Entrante, Pizza, Postre, Bebida): 25€ \n")
+                print("Menu (Entrante, Pizza, Postre): 20€ \n")
+                print("Menu (Entrante, Pizza, Bebida): 20€ \n")
+                print("Menu (Pizza, Postre, Bebida): 20€ \n")
+                print("Menu (Entrante, Pizza): 15€ \n")
+                print("Menu (Pizza, Bebida): 15€ \n")
+                print("Menu (Pizza, Postre): 15€ \n")
+                print("Menu (Pizza): 10€ \n")
+            if seleccion == '2':
+                print("Pizza: 15€ \n")
+                print("Entrante: 7.5€ \n")
+                print("Postre: 7.5€ \n")
+                print("Bebida: 5€ \n")
+
         
         elif opcion == '3':
             break

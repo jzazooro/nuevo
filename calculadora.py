@@ -33,27 +33,51 @@ def calculin():
         e = False
 
     if m == True and b == True and p == True and e == True:
-        print("La cuenta es de 25€")
+        print("La cuenta es de 30€")
     
     if m == True and b == True and p == True and e == False:
-        print("La cuenta es de 20€")
+        print("La cuenta es de 22.5€")
 
     if m == True and b == True and p == False and e == True:
-        print("La cuenta es de 20€")
+        print("La cuenta es de 22.5€")
     
     if m == True and b == False and p == True and e == True:
-        print("La cuenta es de 20€")
+        print("La cuenta es de 25€")
     
     if m == True and b == True and p == False and e == False:
-        print("La cuenta es de 15€")
+        print("La cuenta es de 17.5€")
 
     if m == True and b == False and p == True and e == False:
-        print("La cuenta es de 15€")
+        print("La cuenta es de 20€")
     
     if m == True and b == False and p == False and e == True:
-        print("La cuenta es de 15€")
+        print("La cuenta es de 20€")
     
     if m == True and b == False and p == False and e == False:
-        print("La cuenta es de 10€")
+        print("La cuenta es de 15€")
+
+    if m == False and b == True and p == True and e == True:
+        print("La cuenta es de 20€")
+    
+    if m == False and b == True and p == True and e == False:
+        print("La cuenta es de 12.5€")
+
+    if m == False and b == True and p == False and e == True:
+        print("La cuenta es de 12.5€")
+    
+    if m == False and b == False and p == True and e == True:
+        print("La cuenta es de 15€")
+    
+    if m == False and b == True and p == False and e == False:
+        print("La cuenta es de 5€")
+
+    if m == False and b == False and p == True and e == False:
+        print("La cuenta es de7.55€")
+    
+    if m == False and b == False and p == False and e == True:
+        print("La cuenta es de 7.5€")
+    
+    if m == False and b == False and p == False and e == False:
+        print("La cuenta es de 0€, vete a tomar el pelo a otro local")
 
 calculin()
