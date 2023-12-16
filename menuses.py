@@ -36,7 +36,7 @@ def elegir_menu():
 
 
 def elegir_bebida():
-    bebidas = ["Agua", "Refresco", "Cerveza artesanal", "Vino", "Nada"]
+    bebidas = ["Agua", "Refresco", "Cerveza artesanal", "Vino de la casa", "Domaine de la Romanée-Conti", "Château Lafite Rothschild", "Nada"]
     return mostrar_y_elegir_opciones(bebidas, "bebida")
 
 def elegir_postre():
@@ -44,7 +44,7 @@ def elegir_postre():
     return mostrar_y_elegir_opciones(postres, "postre")
 
 def elegir_entrante():
-    entrantes = ["Nachos Guerrero", "Croquetitas", "Croquetas de cocidito madrileño", "Nada"]
+    entrantes = ["Nachos Guerrero", "Croquetas de cocidito madrileño", "Nada"]
     return mostrar_y_elegir_opciones(entrantes, "entrante")
 
 def guardar_pedido(menu, tamaño, masa, ingredientes, salsa, tecnica_coccion, presentacion, bebida, postre, entrante):
@@ -102,6 +102,11 @@ def menu_ordenar_pizza():
             print("Menu (Pizza, Bebida): 15€ \n")
             print("Menu (Pizza, Postre): 15€ \n")
             print("Menu (Pizza): 10€ \n")
+            print("NOTA \n")
+            print("El vino Domaine de la Romanée-Conti implica un suplemento de 1000€ \n")
+
+            print("Seleccion de nuestros editores. Le recomendamos el Château Lafite Rothschild y las croquetas de cocidito madrileño \n")
+            print(" \n")
         
         elif opcion == '3':
             break
