@@ -36,7 +36,7 @@ def elegir_menu():
 
 
 def elegir_bebida():
-    bebidas = ["Agua", "Refresco", "Cerveza", "Vino", "Nada"]
+    bebidas = ["Agua", "Refresco", "Cerveza artesanal", "Vino", "Nada"]
     return mostrar_y_elegir_opciones(bebidas, "bebida")
 
 def elegir_postre():
@@ -93,7 +93,6 @@ def menu_ordenar_pizza():
 
         if opcion == '1':
             crear_pizza()
-            print("\nEl precio de su pedido es de: \n")
         elif opcion == '2':
             print("Menu (Entrante, Pizza, Postre, Bebida): 25€ \n")
             print("Menu (Entrante, Pizza, Postre): 20€ \n")
