@@ -87,13 +87,24 @@ def menu_ordenar_pizza():
     while True:
         print("\nBienvenido a la Pizzería - Menú de Personalización de Pizza")
         print("1. Crear Pizza Personalizada")
-        print("2. Volver al Menú Principal")
+        print("2. Ver productos y precios")
+        print("3. Volver al Menú Principal")
         opcion = input("Seleccione una opción: ")
 
         if opcion == '1':
             crear_pizza()
             print("\nEl precio de su pedido es de: \n")
         elif opcion == '2':
+            print("Menu (Entrante, Pizza, Postre, Bebida): 25€ \n")
+            print("Menu (Entrante, Pizza, Postre): 20€ \n")
+            print("Menu (Entrante, Pizza, Bebida): 20€ \n")
+            print("Menu (Pizza, Postre, Bebida): 20€ \n")
+            print("Menu (Entrante, Pizza): 15€ \n")
+            print("Menu (Pizza, Bebida): 15€ \n")
+            print("Menu (Pizza, Postre): 15€ \n")
+            print("Menu (Pizza): 10€ \n")
+        
+        elif opcion == '3':
             break
         else:
             print("Opción no válida.")
