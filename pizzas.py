@@ -30,6 +30,11 @@ def mostrar_y_elegir_multiples_opciones(opciones, caracteristica):
         except ValueError:
             print("Por favor, introduce números válidos separados por comas.")
 
+def elegir_menu():
+    menus = ["Si", "No"]
+    return mostrar_y_elegir_opciones(menus, "menu")
+
+
 def elegir_bebida():
     bebidas = ["Agua", "Refresco", "Cerveza", "Vino"]
     return mostrar_y_elegir_opciones(bebidas, "bebida")
@@ -42,16 +47,17 @@ def elegir_entrante():
     entrantes = ["Nachos", "Quesadilla", "Croquetas"]
     return mostrar_y_elegir_opciones(entrantes, "entrante")
 
-def guardar_pedido(tamaño, masa, ingredientes, salsa, tecnica_coccion, presentacion, bebida, postre, entrante):
+def guardar_pedido(menu, tamaño, masa, ingredientes, salsa, tecnica_coccion, presentacion, bebida, postre, entrante):
     existe_archivo = os.path.isfile('pedidos.csv')
     with open('pedidos.csv', 'a', newline='') as archivo:
         writer = csv.writer(archivo)
         if not existe_archivo:
-            writer.writerow(['Tamaño', 'Masa', 'Ingredientes', 'Salsa', 'Técnica de Cocción', 'Presentación', 'Bebida', 'Postre', 'Entrante'])
-        writer.writerow([tamaño, masa, ', '.join(ingredientes), salsa, tecnica_coccion, presentacion, bebida, postre, entrante])
+            writer.writerow(['Menu', 'Tamaño', 'Masa', 'Ingredientes', 'Salsa', 'Técnica de Cocción', 'Presentación', 'Bebida', 'Postre', 'Entrante'])
+        writer.writerow([menu, tamaño, masa, ', '.join(ingredientes), salsa, tecnica_coccion, presentacion, bebida, postre, entrante])
     print("Pedido guardado exitosamente.")
 
 def crear_pizza():
+    menus = ["Si", "No"]
     tamaños = ["Pequeña", "Mediana", "Grande"]
     masas = ["Delgada", "Gruesa", "Artesanal"]
     ingredientes = ["Pepperoni", "Champiñones", "Jalapeños", "Extra queso"]
@@ -59,6 +65,7 @@ def crear_pizza():
     tecnicas_coccion = ["Horno de leña", "Horno convencional"]
     presentaciones = ["Normal", "Sin borde", "Borde de queso"]
 
+    menu = mostrar_y_elegir_opciones(menus, "menú")
     tamaño = mostrar_y_elegir_opciones(tamaños, "tamaño")
     masa = mostrar_y_elegir_opciones(masas, "masa")
     ingredientes_seleccionados = mostrar_y_elegir_multiples_opciones(ingredientes, "ingredientes")
@@ -73,7 +80,7 @@ def crear_pizza():
     print(f"Pizza - Tamaño: {tamaño}, Masa: {masa}, Ingredientes: {', '.join(ingredientes)}, Salsa: {salsa}, Técnica de cocción: {tecnica_coccion}, Presentación: {presentacion}")
     print(f"Bebida: {bebida}, Postre: {postre}, Entrante: {entrante}")
 
-    guardar_pedido(tamaño, masa, ingredientes_seleccionados, salsa, tecnica_coccion, presentacion, bebida, postre, entrante)
+    guardar_pedido(menu, tamaño, masa, ingredientes_seleccionados, salsa, tecnica_coccion, presentacion, bebida, postre, entrante)
 
 # Menú para ordenar pizza
 def menu_ordenar_pizza():
@@ -85,6 +92,7 @@ def menu_ordenar_pizza():
 
         if opcion == '1':
             crear_pizza()
+            print("\nEl precio de su pedido es de: \n")
         elif opcion == '2':
             break
         else:
