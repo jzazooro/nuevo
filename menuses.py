@@ -82,7 +82,6 @@ def crear_pedido():
 
     guardar_pedido(menu, tamaño, masa, ingredientes_seleccionados, salsa, tecnica_coccion, presentacion, bebida, postre, entrante)
 
-# Menú para ordenar pizza
 def menu_ordenar_pizza():
     while True:
         print("\nBienvenido a la Pizzería - Menú de Personalización de Pizza")
@@ -121,6 +120,8 @@ def menu_ordenar_pizza():
         else:
             print("Opción no válida.")
 
-# Llamada al menú principal aquí
+
+
+
 if __name__ == "__main__":
     menu_ordenar_pizza()
