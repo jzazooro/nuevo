@@ -1,4 +1,5 @@
 import os
+import csv
 
 def mostrar_y_elegir_opciones(opciones, caracteristica):
     while True:
@@ -29,6 +30,15 @@ def mostrar_y_elegir_multiples_opciones(opciones, caracteristica):
         except ValueError:
             print("Por favor, introduce números válidos separados por comas.")
 
+def guardar_pedido(tamaño, masa, ingredientes, salsa, tecnica_coccion, presentacion):
+    existe_archivo = os.path.isfile('pedidos.csv')
+    with open('pedidos.csv', 'a', newline='') as archivo:
+        writer = csv.writer(archivo)
+        if not existe_archivo:
+            writer.writerow(['Tamaño', 'Masa', 'Ingredientes', 'Salsa', 'Técnica de Cocción', 'Presentación'])
+        writer.writerow([tamaño, masa, ', '.join(ingredientes), salsa, tecnica_coccion, presentacion])
+    print("Pedido guardado exitosamente.")
+
 def crear_pizza():
     tamaños = ["Pequeña", "Mediana", "Grande"]
     masas = ["Delgada", "Gruesa", "Artesanal"]
@@ -46,6 +56,7 @@ def crear_pizza():
 
     print("\nTu pizza personalizada:")
     print(f"Tamaño: {tamaño}, Masa: {masa}, Ingredientes: {', '.join(ingredientes_seleccionados)}, Salsa: {salsa}, Técnica de cocción: {tecnica_coccion}, Presentación: {presentacion}")
+    guardar_pedido(tamaño, masa, ingredientes_seleccionados, salsa, tecnica_coccion, presentacion)
 
 # Menú para ordenar pizza
 def menu_ordenar_pizza():
