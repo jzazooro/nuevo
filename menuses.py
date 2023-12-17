@@ -85,7 +85,7 @@ def crear_pedido():
 def menu_ordenar_pizza():
     while True:
         print("\nBienvenido a la Pizzería - Menú de Personalización de Pizza")
-        print("1. Crear Pizza Personalizada")
+        print("1. Hacer pedido")
         print("2. Ver la carta")
         print("3. Volver al Menú Principal")
         opcion = input("Seleccione una opción: ")
