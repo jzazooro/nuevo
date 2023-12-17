@@ -5,7 +5,7 @@ from notificador import *
 
 import csv
 import os
-from lanzador import main
+from lanzador import *
 
 
 if __name__ == "__main__":
