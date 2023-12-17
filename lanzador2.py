@@ -7,4 +7,4 @@ from ejercicio2.prueba4 import *
  
 
 def main():
-    print("Ejercicio 1")
+    print("Fin del ejemplo.")
