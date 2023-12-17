@@ -33,17 +33,16 @@ class CEOHandler(ApprovalHandler):
         if request["level"] > 5:
             print("Aprobado por el CEO")
 
-# Cliente
-if __name__ == "__main__":
-    manager = ManagerHandler()
-    director = DirectorHandler()
-    ceo = CEOHandler()
 
-    # Establecer la cadena de responsabilidad
-    manager.set_next(director).set_next(ceo)
+manager = ManagerHandler()
+director = DirectorHandler()
+ceo = CEOHandler()
 
-    # Crear una solicitud
-    request = {"level": 4}
+# Establecer la cadena de responsabilidad
+manager.set_next(director).set_next(ceo)
 
-    # Iniciar el proceso de aprobación
-    manager.handle_request(request)
+# Crear una solicitud
+request = {"level": 4}
+
+# Iniciar el proceso de aprobación
+manager.handle_request(request)

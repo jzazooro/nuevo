@@ -34,12 +34,10 @@ class Document:
     def change_state(self):
         self.state.handle_request(self)
 
-# Uso del Patrón State
-if __name__ == "__main__":
-    document = Document()
 
-    # Cambios de estado
-    document.change_state()  # De Borrador a Revisión
-    document.change_state()  # De Revisión a Aprobado
-    document.change_state()  # De Aprobado a Publicado
-    document.change_state()  # Intento de cambio en estado Publicado
+document = Document()
+# Cambios de estado
+document.change_state()  # De Borrador a Revisión
+document.change_state()  # De Revisión a Aprobado
+document.change_state()  # De Aprobado a Publicado
+document.change_state()  # Intento de cambio en estado Publicado
