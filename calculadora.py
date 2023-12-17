@@ -79,5 +79,3 @@ def calculin():
     
     if m == False and b == False and p == False and e == False:
         print("La cuenta es de 0€, vete a tomar el pelo a otro local")
-
-calculin()

@@ -29,24 +29,3 @@ class Cliente(Observer):
 class SistemaPromociones(Observable):
     def agregar_promocion(self, promocion):
         self.notify_observers(promocion)
-
-# Ejemplo de uso
-sistema_promociones = SistemaPromociones()
-
-archivo_csv = 'clientes.csv' 
-
-listo = None
-
-with open(archivo_csv, 'r') as file:
-    csv_reader = csv.reader(file)
-
-    for fila in csv_reader:
-        listo = fila
-
-sujeto = listo[0]
-
-cliente1 = Cliente(sujeto)
-
-sistema_promociones.subscribe(cliente1)
-
-sistema_promociones.agregar_promocion("30% de descuento en tu próxima compra")

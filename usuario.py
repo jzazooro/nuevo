@@ -53,19 +53,3 @@ def verificar_usuario(correo, contraseña):
                 return True
         return False
 
-# Menú principal
-while True:
-    print("\nBienvenido a la Pizzería")
-    print("1. Registrarse")
-    print("2. Iniciar Sesión")
-    print("3. Salir")
-    opcion = input("Seleccione una opción: ")
-
-    if opcion == '1':
-        registrar_usuario()
-    elif opcion == '2':
-        iniciar_sesion()
-    elif opcion == '3':
-        break
-    else:
-        print("Opción no válida.")

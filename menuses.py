@@ -92,6 +92,7 @@ def menu_ordenar_pizza():
 
         if opcion == '1':
             crear_pedido()
+            break
         elif opcion == '2':
             print("1. Carta de menus")
             print("2. Carta individual")
@@ -122,6 +123,3 @@ def menu_ordenar_pizza():
 
 
 
-
-if __name__ == "__main__":
-    menu_ordenar_pizza()
