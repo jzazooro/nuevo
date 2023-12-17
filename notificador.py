@@ -1,3 +1,6 @@
+import csv
+
+
 class Observable:
     def __init__(self):
         self._observers = []
@@ -30,7 +33,19 @@ class SistemaPromociones(Observable):
 # Ejemplo de uso
 sistema_promociones = SistemaPromociones()
 
-cliente1 = Cliente("Juan")
+archivo_csv = 'clientes.csv' 
+
+listo = None
+
+with open(archivo_csv, 'r') as file:
+    csv_reader = csv.reader(file)
+
+    for fila in csv_reader:
+        listo = fila
+
+sujeto = listo[0]
+
+cliente1 = Cliente(sujeto)
 
 sistema_promociones.subscribe(cliente1)
 
