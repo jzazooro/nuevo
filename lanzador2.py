@@ -6,5 +6,5 @@ from ejercicio2.prueba3 import *
 from ejercicio2.prueba4 import *
  
 
-def main():
+def main2():
     print("Fin del ejemplo.")

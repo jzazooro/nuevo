@@ -1,7 +1,7 @@
-from usuario import *
-from menuses import *
-from calculadora import *
-from notificador import *
+from ejercicio1.usuario import *
+from ejercicio1.menuses import *
+from ejercicio1.calculadora import *
+from ejercicio1.notificador import *
 
 import csv
 import os
