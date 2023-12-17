@@ -38,64 +38,66 @@ def calculin():
         e = False
 
     if m == True and b == True and p == True and e == True:
-        o=30+z
+        o=10+z
         print("La cuenta es de", o, "€")
     
     if m == True and b == True and p == True and e == False:
-        o=22.5+z
-        print("La cuenta es de 22.5€")
+        o=15+z
+        print("La cuenta es de", o, "€")
 
     if m == True and b == True and p == False and e == True:
-        o=22.5+z
-        print("La cuenta es de 22.5€")
+        o=15+z
+        print("La cuenta es de", o, "€")
     
     if m == True and b == False and p == True and e == True:
-        o=25+z
-        print("La cuenta es de 25€")
+        o=15+z
+        print("La cuenta es de", o, "€")
     
     if m == True and b == True and p == False and e == False:
-        o=17.5+z
-        print("La cuenta es de 17.5€")
+        o=20+z
+        print("La cuenta es de", o, "€")
 
     if m == True and b == False and p == True and e == False:
         o=20+z
-        print("La cuenta es de 20€")
+        print("La cuenta es de", o, "€")
     
     if m == True and b == False and p == False and e == True:
         o=20+z
-        print("La cuenta es de 20€")
+        print("La cuenta es de", o, "€")
     
     if m == True and b == False and p == False and e == False:
-        o=15+z
-        print("La cuenta es de 15€")
+        o=25+z
+        print("La cuenta es de", o, "€")
 
     if m == False and b == True and p == True and e == True:
-        o=20+z
-        print("La cuenta es de 20€")
+        o=15+z
+        print("La cuenta es de", o, "€")
     
     if m == False and b == True and p == True and e == False:
-        o=12.5+z
-        print("La cuenta es de 12.5€")
+        o=22.5+z
+        print("La cuenta es de", o, "€")
 
     if m == False and b == True and p == False and e == True:
-        o=12.5+z
-        print("La cuenta es de 12.5€")
+        o=22.5+z
+        print("La cuenta es de", o, "€")
     
     if m == False and b == False and p == True and e == True:
-        o=15+z
-        print("La cuenta es de 15€")
+        o=20+z
+        print("La cuenta es de", o, "€")
     
     if m == False and b == True and p == False and e == False:
-        o=5+z
-        print("La cuenta es de 5€")
+        o=30+z
+        print("La cuenta es de", o, "€")
 
     if m == False and b == False and p == True and e == False:
-        o=7.5+z
-        print("La cuenta es de7.55€")
+        o=27.5+z
+        print("La cuenta es de", o, "€")
     
     if m == False and b == False and p == False and e == True:
-        o=7.5+z
-        print("La cuenta es de 7.5€")
+        o=27.5+z
+        print("La cuenta es de", o, "€")
     
     if m == False and b == False and p == False and e == False:
-        print("La cuenta es de 0€, vete a tomar el pelo a otro local")
+        o=35+z
+        print("La cuenta es de", o, "€")
+        
