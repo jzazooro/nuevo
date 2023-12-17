@@ -33,8 +33,11 @@ class Folder(FileSystemEntity):
     def add(self, component: FileSystemEntity):
         self.children.append(component)
 
-    def remove(self, component: FileSystemEntity):
-        self.children.remove(component)
+    def remove(self, component):
+        if component in self.children:
+            self.children.remove(component)
+        else:
+            print("El documento no se encuentra en esta carpeta.")
 
     def show_details(self):
         print(f"Carpeta: {self.name}")
